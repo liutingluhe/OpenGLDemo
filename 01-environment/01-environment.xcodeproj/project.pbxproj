@@ -278,6 +278,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-1-environment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -301,6 +302,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-1-environment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
