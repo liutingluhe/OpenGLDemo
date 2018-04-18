@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		329C4B1220878EA10007CA73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329C4B1120878EA10007CA73 /* Assets.xcassets */; };
+		329C4B2120878EAD0007CA73 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B2020878EAD0007CA73 /* OpenGL.framework */; };
+		329C4B2320878EB50007CA73 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B2220878EB50007CA73 /* GLUT.framework */; };
+		329C4B2620878ED70007CA73 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B2420878ED70007CA73 /* libGLEW.2.1.0.dylib */; };
+		329C4B2720878ED70007CA73 /* libgltools.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B2520878ED70007CA73 /* libgltools.dylib */; };
+		329C4B2920878EE20007CA73 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329C4B2820878EE20007CA73 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		329C4B0B20878EA10007CA73 /* 12-ModelViewProjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "12-ModelViewProjection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		329C4B1120878EA10007CA73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		329C4B1620878EA10007CA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		329C4B1920878EA10007CA73 /* _2_ModelViewProjection.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _2_ModelViewProjection.entitlements; sourceTree = "<group>"; };
+		329C4B2020878EAD0007CA73 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		329C4B2220878EB50007CA73 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		329C4B2420878ED70007CA73 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		329C4B2520878ED70007CA73 /* libgltools.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgltools.dylib; sourceTree = "<group>"; };
+		329C4B2820878EE20007CA73 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		329C4B0820878EA10007CA73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				329C4B2620878ED70007CA73 /* libGLEW.2.1.0.dylib in Frameworks */,
+				329C4B2720878ED70007CA73 /* libgltools.dylib in Frameworks */,
+				329C4B2320878EB50007CA73 /* GLUT.framework in Frameworks */,
+				329C4B2120878EAD0007CA73 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		329C4B0220878EA10007CA73 = {
+			isa = PBXGroup;
+			children = (
+				329C4B0D20878EA10007CA73 /* 12-ModelViewProjection */,
+				329C4B0C20878EA10007CA73 /* Products */,
+				329C4B1F20878EAD0007CA73 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		329C4B0C20878EA10007CA73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				329C4B0B20878EA10007CA73 /* 12-ModelViewProjection.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		329C4B0D20878EA10007CA73 /* 12-ModelViewProjection */ = {
+			isa = PBXGroup;
+			children = (
+				329C4B1120878EA10007CA73 /* Assets.xcassets */,
+				329C4B1620878EA10007CA73 /* Info.plist */,
+				329C4B1920878EA10007CA73 /* _2_ModelViewProjection.entitlements */,
+				329C4B2820878EE20007CA73 /* main.cpp */,
+			);
+			path = "12-ModelViewProjection";
+			sourceTree = "<group>";
+		};
+		329C4B1F20878EAD0007CA73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				329C4B2420878ED70007CA73 /* libGLEW.2.1.0.dylib */,
+				329C4B2520878ED70007CA73 /* libgltools.dylib */,
+				329C4B2220878EB50007CA73 /* GLUT.framework */,
+				329C4B2020878EAD0007CA73 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		329C4B0A20878EA10007CA73 /* 12-ModelViewProjection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 329C4B1C20878EA10007CA73 /* Build configuration list for PBXNativeTarget "12-ModelViewProjection" */;
+			buildPhases = (
+				329C4B0720878EA10007CA73 /* Sources */,
+				329C4B0820878EA10007CA73 /* Frameworks */,
+				329C4B0920878EA10007CA73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "12-ModelViewProjection";
+			productName = "12-ModelViewProjection";
+			productReference = 329C4B0B20878EA10007CA73 /* 12-ModelViewProjection.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		329C4B0320878EA10007CA73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "luhe liu";
+				TargetAttributes = {
+					329C4B0A20878EA10007CA73 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 329C4B0620878EA10007CA73 /* Build configuration list for PBXProject "12-ModelViewProjection" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 329C4B0220878EA10007CA73;
+			productRefGroup = 329C4B0C20878EA10007CA73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				329C4B0A20878EA10007CA73 /* 12-ModelViewProjection */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		329C4B0920878EA10007CA73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				329C4B1220878EA10007CA73 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		329C4B0720878EA10007CA73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				329C4B2920878EE20007CA73 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		329C4B1A20878EA10007CA73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		329C4B1B20878EA10007CA73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		329C4B1D20878EA10007CA73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "12-ModelViewProjection/_2_ModelViewProjection.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RGQWE6DV47;
+				HEADER_SEARCH_PATHS = (
+					"$(gltools_header)",
+					"$(glew_header)",
+				);
+				INFOPLIST_FILE = "12-ModelViewProjection/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-2-ModelViewProjection";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		329C4B1E20878EA10007CA73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "12-ModelViewProjection/_2_ModelViewProjection.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = RGQWE6DV47;
+				HEADER_SEARCH_PATHS = (
+					"$(gltools_header)",
+					"$(glew_header)",
+				);
+				INFOPLIST_FILE = "12-ModelViewProjection/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-2-ModelViewProjection";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		329C4B0620878EA10007CA73 /* Build configuration list for PBXProject "12-ModelViewProjection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				329C4B1A20878EA10007CA73 /* Debug */,
+				329C4B1B20878EA10007CA73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		329C4B1C20878EA10007CA73 /* Build configuration list for PBXNativeTarget "12-ModelViewProjection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				329C4B1D20878EA10007CA73 /* Debug */,
+				329C4B1E20878EA10007CA73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 329C4B0320878EA10007CA73 /* Project object */;
+}
