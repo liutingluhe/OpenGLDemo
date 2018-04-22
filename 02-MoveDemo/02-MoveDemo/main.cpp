@@ -14,22 +14,22 @@
 GLBatch squareBatch;
 GLShaderManager shaderManager;
 
-GLfloat blockSize = 0.1f;
+GLfloat blockSize = 0.2f;
 GLfloat vVerts[] = {
-    -blockSize, -blockSize, 0.0f,
-    blockSize, -blockSize, 0.0f,
-    blockSize,  blockSize, 0.0f,
-    -blockSize,  blockSize, 0.0f
+    -blockSize, -blockSize, 0.0f, //左下角
+    blockSize, -blockSize, 0.0f,  //右下角
+    blockSize,  blockSize, 0.0f,  //右上角
+    -blockSize,  blockSize, 0.0f  //左上角
 };
 
-// 监控特殊按键（功能键和方向键）点击
-void SpecialKeys(int key, int x, int y) {
+int specialKey = GLUT_KEY_RIGHT;
+
+void  BounceFunction(int key) {
     //每次按键的矩形移动距离
     GLfloat stepSize = 0.025f;
-    //左上角坐标的 X
+    //左下角坐标的 (x, y)
     GLfloat blockX = vVerts[0];
-    //右下角坐标的 Y
-    GLfloat blockY = vVerts[7];
+    GLfloat blockY = vVerts[1];
     
     //判断键盘点击的是哪个按钮，计算下一个点的位置
     if(key == GLUT_KEY_UP) blockY += stepSize;
@@ -39,31 +39,40 @@ void SpecialKeys(int key, int x, int y) {
     
     //边界检测，让矩形没法超出边界
     if(blockX < -1.0f) blockX = -1.0f;
-    if(blockX > (1.0f - blockSize * 2)) blockX = 1.0f - blockSize * 2;;
-    if(blockY < -1.0f + blockSize * 2)  blockY = -1.0f + blockSize * 2;
-    if(blockY > 1.0f) blockY = 1.0f;
+    if(blockX > (1.0f - blockSize * 2)) blockX = 1.0f - blockSize * 2;
+    if(blockY < -1.0f) blockY = -1.0f;
+    if(blockY > (1.0f - blockSize * 2)) blockY = 1.0f - blockSize * 2;
     
     //设置下个位置的 4 个顶点坐标
-    //左上角
-    vVerts[0] = blockX;
-    vVerts[1] = blockY - blockSize * 2;
-    //右上角
-    vVerts[3] = blockX + blockSize * 2;
-    vVerts[4] = blockY - blockSize * 2;
-    //右下角
-    vVerts[6] = blockX + blockSize * 2;
-    vVerts[7] = blockY;
     //左下角
+    vVerts[0] = blockX;
+    vVerts[1] = blockY;
+    //右下角
+    vVerts[3] = blockX + blockSize * 2;
+    vVerts[4] = blockY;
+    //右上角
+    vVerts[6] = blockX + blockSize * 2;
+    vVerts[7] = blockY + blockSize * 2;
+    //左上角
     vVerts[9] = blockX;
-    vVerts[10] = blockY;
+    vVerts[10] = blockY + blockSize * 2;
     
     //批次里面的数据更新
     squareBatch.CopyVertexData3f(vVerts);
-    //触发重画事件 -> RenderScene
-    glutPostRedisplay();
 }
 
-//开始渲染
+// 监控特殊按键（功能键和方向键）点击
+void SpecialKeys(int key, int x, int y) {
+    
+    specialKey = key;
+    
+//    BounceFunction(key);
+    
+    //触发重画事件 -> RenderScene
+//    glutPostRedisplay();
+}
+
+//窗口渲染
 void RenderScene(void) {
     //清除一个或一组特定的缓冲区
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
@@ -76,6 +85,12 @@ void RenderScene(void) {
     
     //将在后台缓冲区进行渲染，然后在结束时交换到前台
     glutSwapBuffers();
+    
+    //计算下一个矩形位置
+    BounceFunction(specialKey);
+
+    //触发重画事件 -> RenderScene
+    glutPostRedisplay();
 }
 
 //为程序作一次性的设置
@@ -93,8 +108,8 @@ void SetupRC() {
 }
 
 //窗口大小改变时接受新的宽度和高度，其中0,0代表窗口中视口的左下角坐标，w，h代表像素
-void ChangeSize(int w, int h) {
-    glViewport(0, 0, w, h);
+void ChangeSize(int width, int height) {
+    glViewport(0, 0, width, height);
 }
 
 //程序入口
@@ -114,9 +129,11 @@ int main(int argc, char* argv[]) {
     //创建窗口
     glutCreateWindow("MoveDemo");
     
-    //注册回调函数
+    //注册窗口大小变化回调函数
     glutReshapeFunc(ChangeSize);
+    //注册窗口渲染回调函数
     glutDisplayFunc(RenderScene);
+    //注册键盘特殊按键点击回调函数
     glutSpecialFunc(SpecialKeys);
     
     //确保驱动程序的初始化中没有出现任何问题。
