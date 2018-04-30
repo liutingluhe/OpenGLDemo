@@ -200,9 +200,11 @@ void SetupRC() {
 
 //画点
 void DrawPointBatch(GLBatch* pBatch) {
-    //画点
+    //使用着色器
     shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vBlack);
+    //设置点大小
     glPointSize(4.0f);
+    //画点
     pBatch->Draw();
     
     //还原绘画环境
@@ -211,9 +213,11 @@ void DrawPointBatch(GLBatch* pBatch) {
 
 //画线
 void DrawLineBatch(GLBatch* pBatch) {
-    //画线
+    //使用着色器
     shaderManager.UseStockShader(GLT_SHADER_FLAT, transformPipeline.GetModelViewProjectionMatrix(), vBlack);
+    //设置线粗
     glLineWidth(2.0f);
+    //画线
     pBatch->Draw();
     
     //还原绘画环境
@@ -300,18 +304,10 @@ void SpecialKeys(int key, int x, int y) {
      * m3dDegToRad：角度 -> 弧度
      */
     switch (key) {
-        case GLUT_KEY_UP:
-            objectFrame.RotateWorld(m3dDegToRad(-5.0f), 1.0f, 0.0f, 0.0f);
-            break;
-        case GLUT_KEY_DOWN:
-            objectFrame.RotateWorld(m3dDegToRad(5.0f), 1.0f, 0.0f, 0.0f);
-            break;
-        case GLUT_KEY_LEFT:
-            objectFrame.RotateWorld(m3dDegToRad(-5.0f), 0.0f, 1.0f, 0.0f);
-            break;
-        case GLUT_KEY_RIGHT:
-            objectFrame.RotateWorld(m3dDegToRad(5.0f), 0.0f, 1.0f, 0.0f);
-            break;
+        case GLUT_KEY_UP: objectFrame.RotateWorld(m3dDegToRad(-5.0f), 1.0f, 0.0f, 0.0f); break;
+        case GLUT_KEY_DOWN: objectFrame.RotateWorld(m3dDegToRad(5.0f), 1.0f, 0.0f, 0.0f); break;
+        case GLUT_KEY_LEFT: objectFrame.RotateWorld(m3dDegToRad(-5.0f), 0.0f, 1.0f, 0.0f); break;
+        case GLUT_KEY_RIGHT: objectFrame.RotateWorld(m3dDegToRad(5.0f), 0.0f, 1.0f, 0.0f); break;
         default:
             break;
     }
@@ -346,16 +342,16 @@ void KeyPressFunc(unsigned char key, int x, int y) {
 }
 
 //窗口大小改变时接受新的宽度和高度
-void ChangeSize(int w, int h) {
+void ChangeSize(int width, int height) {
     
     // 防止下面除法的除数为0导致的闪退
-    if(h == 0) h = 1;
+    if(height == 0) height = 1;
     
     //设置视图窗口位置
-    glViewport(0, 0, w, h);
+    glViewport(0, 0, width, height);
     
     // 创建投影矩阵，并将它载入到投影矩阵堆栈中
-    viewFrustum.SetPerspective(35.0f, float(w) / float(h), 1.0f, 500.0f);
+    viewFrustum.SetPerspective(35.0f, float(width) / float(height), 1.0f, 500.0f);
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
     
     // 在模型视图矩阵顶部载入单位矩阵
