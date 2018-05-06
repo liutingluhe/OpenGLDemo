@@ -66,7 +66,7 @@ void RenderScene(void) {
         glEnable(GL_CULL_FACE);
     else
         glDisable(GL_CULL_FACE);
-    
+
     //判断是否开启深度测试
     if(iDepth)
         glEnable(GL_DEPTH_TEST);
@@ -80,7 +80,7 @@ void RenderScene(void) {
     GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 1.0f };
     shaderManager.UseStockShader(GLT_SHADER_DEFAULT_LIGHT, transformPipeline.GetModelViewMatrix(), transformPipeline.GetProjectionMatrix(), vRed);
     
-    //画图
+    //画花托
     torusBatch.Draw();
     
     // 还原以前的模型视图矩阵
@@ -104,7 +104,7 @@ void SetupRC() {
     //移动物体的位置，值越大物体越远，值越小物体越近
     viewFrame.MoveForward(6.0f);
     
-    //创建一个花托批次，参数依次是：批次，外半径，内半径，外径圆顶点数，内径圆顶点数（在计算机中圆是正多边形，顶点数越多越像真正的圆）
+    //创建一个花托批次，参数依次是：批次，外半径，内半径，片段数，堆叠数（在计算机中圆是正多边形，顶点数越多越像真正的圆）
     gltMakeTorus(torusBatch, 1.0f, 0.3f, 52, 26);
     
     //设置默认点大小
@@ -141,15 +141,15 @@ void SpecialKeys(int key, int x, int y) {
 }
 
 //窗口大小改变时接受新的宽度和高度，其中0,0代表窗口中视口的左下角坐标，w，h代表像素
-void ChangeSize(int w, int h) {
+void ChangeSize(int width, int height) {
     // 防止下面除法的除数为0导致的闪退
-    if(h == 0) h = 1;
+    if(height == 0) height = 1;
     
     //设置视图窗口位置
-    glViewport(0, 0, w, h);
+    glViewport(0, 0, width, height);
     
     // 创建投影矩阵，并将它载入到投影矩阵堆栈中
-    viewFrustum.SetPerspective(35.0f, float(w) / float(h), 1.0f, 500.0f);
+    viewFrustum.SetPerspective(35.0f, float(width) / float(height), 1.0f, 500.0f);
     projectionMatrix.LoadMatrix(viewFrustum.GetProjectionMatrix());
 }
 
