@@ -130,9 +130,9 @@ void RenderScene(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
     
     //定义4种颜色
-    GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 0.5f };
+    GLfloat vRed[] = { 1.0f, 0.0f, 0.0f, 1.0f };
     GLfloat vGreen[] = { 0.0f, 1.0f, 0.0f, 1.0f };
-    GLfloat vBlue[] = { 0.0f, 0.0f, 1.0f, 1.0f };
+    GLfloat vBlue[] = { 0.0f, 0.0f, 1.0f, 0.6f };
     GLfloat vBlack[] = { 0.0f, 0.0f, 0.0f, 1.0f };
     
     //画绿色矩形
@@ -155,8 +155,8 @@ void RenderScene(void) {
     glEnable(GL_BLEND);
     //配置混合方程式
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    //画移动矩形，本身半透明红色
-    shaderManager.UseStockShader(GLT_SHADER_IDENTITY, vRed);
+    //画移动矩形，本身半透明蓝色
+    shaderManager.UseStockShader(GLT_SHADER_IDENTITY, vBlue);
     squareBatch.Draw();
     //关闭颜色混合
     glDisable(GL_BLEND);
