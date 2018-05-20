@@ -7,76 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		329C4B3A20878F3D0007CA73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329C4B3920878F3D0007CA73 /* Assets.xcassets */; };
-		329C4B4920878F490007CA73 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B4820878F490007CA73 /* OpenGL.framework */; };
-		329C4B4B20878F4F0007CA73 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B4A20878F4F0007CA73 /* GLUT.framework */; };
-		329C4B4E20878F7D0007CA73 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B4C20878F7D0007CA73 /* libGLEW.2.1.0.dylib */; };
-		329C4B4F20878F7D0007CA73 /* libgltools.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 329C4B4D20878F7D0007CA73 /* libgltools.dylib */; };
-		329C4B5120878F880007CA73 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329C4B5020878F880007CA73 /* main.cpp */; };
+		32B4330E20B164DC00FC933E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B4330D20B164DC00FC933E /* Assets.xcassets */; };
+		32B4331D20B1653000FC933E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4331C20B1653000FC933E /* OpenGL.framework */; };
+		32B4331F20B1653700FC933E /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4331E20B1653700FC933E /* GLUT.framework */; };
+		32B4332220B1654900FC933E /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4332020B1654900FC933E /* libGLEW.2.1.0.dylib */; };
+		32B4332320B1654900FC933E /* libgltools.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B4332120B1654900FC933E /* libgltools.dylib */; };
+		32B4332520B1656100FC933E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B4332420B1656100FC933E /* main.cpp */; };
+		32B4332720B1658600FC933E /* stone.tga in Resources */ = {isa = PBXBuildFile; fileRef = 32B4332620B1658600FC933E /* stone.tga */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		329C4B3320878F3D0007CA73 /* 13-SphereWorld-Lv1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "13-SphereWorld-Lv1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		329C4B3920878F3D0007CA73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		329C4B3E20878F3D0007CA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		329C4B4120878F3D0007CA73 /* _3_SphereWorld_Lv1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _3_SphereWorld_Lv1.entitlements; sourceTree = "<group>"; };
-		329C4B4820878F490007CA73 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		329C4B4A20878F4F0007CA73 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		329C4B4C20878F7D0007CA73 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
-		329C4B4D20878F7D0007CA73 /* libgltools.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgltools.dylib; sourceTree = "<group>"; };
-		329C4B5020878F880007CA73 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		32B4330720B164DC00FC933E /* 17-Pyramid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "17-Pyramid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32B4330D20B164DC00FC933E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32B4331220B164DC00FC933E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B4331520B164DC00FC933E /* _7_Pyramid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = _7_Pyramid.entitlements; sourceTree = "<group>"; };
+		32B4331C20B1653000FC933E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		32B4331E20B1653700FC933E /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		32B4332020B1654900FC933E /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		32B4332120B1654900FC933E /* libgltools.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libgltools.dylib; sourceTree = "<group>"; };
+		32B4332420B1656100FC933E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		32B4332620B1658600FC933E /* stone.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = stone.tga; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		329C4B3020878F3D0007CA73 /* Frameworks */ = {
+		32B4330420B164DC00FC933E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329C4B4E20878F7D0007CA73 /* libGLEW.2.1.0.dylib in Frameworks */,
-				329C4B4F20878F7D0007CA73 /* libgltools.dylib in Frameworks */,
-				329C4B4B20878F4F0007CA73 /* GLUT.framework in Frameworks */,
-				329C4B4920878F490007CA73 /* OpenGL.framework in Frameworks */,
+				32B4332220B1654900FC933E /* libGLEW.2.1.0.dylib in Frameworks */,
+				32B4332320B1654900FC933E /* libgltools.dylib in Frameworks */,
+				32B4331F20B1653700FC933E /* GLUT.framework in Frameworks */,
+				32B4331D20B1653000FC933E /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		329C4B2A20878F3D0007CA73 = {
+		32B432FE20B164DC00FC933E = {
 			isa = PBXGroup;
 			children = (
-				329C4B3520878F3D0007CA73 /* 13-SphereWorld-Lv1 */,
-				329C4B3420878F3D0007CA73 /* Products */,
-				329C4B4720878F490007CA73 /* Frameworks */,
+				32B4330920B164DC00FC933E /* 17-Pyramid */,
+				32B4330820B164DC00FC933E /* Products */,
+				32B4331B20B1653000FC933E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		329C4B3420878F3D0007CA73 /* Products */ = {
+		32B4330820B164DC00FC933E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				329C4B3320878F3D0007CA73 /* 13-SphereWorld-Lv1.app */,
+				32B4330720B164DC00FC933E /* 17-Pyramid.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		329C4B3520878F3D0007CA73 /* 13-SphereWorld-Lv1 */ = {
+		32B4330920B164DC00FC933E /* 17-Pyramid */ = {
 			isa = PBXGroup;
 			children = (
-				329C4B3920878F3D0007CA73 /* Assets.xcassets */,
-				329C4B3E20878F3D0007CA73 /* Info.plist */,
-				329C4B4120878F3D0007CA73 /* _3_SphereWorld_Lv1.entitlements */,
-				329C4B5020878F880007CA73 /* main.cpp */,
+				32B4330D20B164DC00FC933E /* Assets.xcassets */,
+				32B4331220B164DC00FC933E /* Info.plist */,
+				32B4331520B164DC00FC933E /* _7_Pyramid.entitlements */,
+				32B4332620B1658600FC933E /* stone.tga */,
+				32B4332420B1656100FC933E /* main.cpp */,
 			);
-			path = "13-SphereWorld-Lv1";
+			path = "17-Pyramid";
 			sourceTree = "<group>";
 		};
-		329C4B4720878F490007CA73 /* Frameworks */ = {
+		32B4331B20B1653000FC933E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				329C4B4C20878F7D0007CA73 /* libGLEW.2.1.0.dylib */,
-				329C4B4D20878F7D0007CA73 /* libgltools.dylib */,
-				329C4B4A20878F4F0007CA73 /* GLUT.framework */,
-				329C4B4820878F490007CA73 /* OpenGL.framework */,
+				32B4332020B1654900FC933E /* libGLEW.2.1.0.dylib */,
+				32B4332120B1654900FC933E /* libgltools.dylib */,
+				32B4331E20B1653700FC933E /* GLUT.framework */,
+				32B4331C20B1653000FC933E /* OpenGL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,39 +87,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		329C4B3220878F3D0007CA73 /* 13-SphereWorld-Lv1 */ = {
+		32B4330620B164DC00FC933E /* 17-Pyramid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 329C4B4420878F3D0007CA73 /* Build configuration list for PBXNativeTarget "13-SphereWorld-Lv1" */;
+			buildConfigurationList = 32B4331820B164DC00FC933E /* Build configuration list for PBXNativeTarget "17-Pyramid" */;
 			buildPhases = (
-				329C4B2F20878F3D0007CA73 /* Sources */,
-				329C4B3020878F3D0007CA73 /* Frameworks */,
-				329C4B3120878F3D0007CA73 /* Resources */,
+				32B4330320B164DC00FC933E /* Sources */,
+				32B4330420B164DC00FC933E /* Frameworks */,
+				32B4330520B164DC00FC933E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "13-SphereWorld-Lv1";
-			productName = "13-SphereWorld-Lv1";
-			productReference = 329C4B3320878F3D0007CA73 /* 13-SphereWorld-Lv1.app */;
+			name = "17-Pyramid";
+			productName = "17-Pyramid";
+			productReference = 32B4330720B164DC00FC933E /* 17-Pyramid.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		329C4B2B20878F3D0007CA73 /* Project object */ = {
+		32B432FF20B164DC00FC933E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "luhe liu";
 				TargetAttributes = {
-					329C4B3220878F3D0007CA73 = {
+					32B4330620B164DC00FC933E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 329C4B2E20878F3D0007CA73 /* Build configuration list for PBXProject "13-SphereWorld-Lv1" */;
+			buildConfigurationList = 32B4330220B164DC00FC933E /* Build configuration list for PBXProject "17-Pyramid" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,40 +127,41 @@
 				en,
 				Base,
 			);
-			mainGroup = 329C4B2A20878F3D0007CA73;
-			productRefGroup = 329C4B3420878F3D0007CA73 /* Products */;
+			mainGroup = 32B432FE20B164DC00FC933E;
+			productRefGroup = 32B4330820B164DC00FC933E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				329C4B3220878F3D0007CA73 /* 13-SphereWorld-Lv1 */,
+				32B4330620B164DC00FC933E /* 17-Pyramid */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		329C4B3120878F3D0007CA73 /* Resources */ = {
+		32B4330520B164DC00FC933E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329C4B3A20878F3D0007CA73 /* Assets.xcassets in Resources */,
+				32B4332720B1658600FC933E /* stone.tga in Resources */,
+				32B4330E20B164DC00FC933E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		329C4B2F20878F3D0007CA73 /* Sources */ = {
+		32B4330320B164DC00FC933E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				329C4B5120878F880007CA73 /* main.cpp in Sources */,
+				32B4332520B1656100FC933E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		329C4B4220878F3D0007CA73 /* Debug */ = {
+		32B4331620B164DC00FC933E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -212,7 +216,7 @@
 			};
 			name = Debug;
 		};
-		329C4B4320878F3D0007CA73 /* Release */ = {
+		32B4331720B164DC00FC933E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,50 +264,50 @@
 			};
 			name = Release;
 		};
-		329C4B4520878F3D0007CA73 /* Debug */ = {
+		32B4331920B164DC00FC933E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "13-SphereWorld-Lv1/_3_SphereWorld_Lv1.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "17-Pyramid/_7_Pyramid.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RGQWE6DV47;
 				HEADER_SEARCH_PATHS = (
-					"$(gltools_header)",
 					"$(glew_header)",
+					"$(gltools_header)",
 				);
-				INFOPLIST_FILE = "13-SphereWorld-Lv1/Info.plist";
+				INFOPLIST_FILE = "17-Pyramid/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-3-SphereWorld-Lv1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-7-Pyramid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		329C4B4620878F3D0007CA73 /* Release */ = {
+		32B4331A20B164DC00FC933E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "13-SphereWorld-Lv1/_3_SphereWorld_Lv1.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "17-Pyramid/_7_Pyramid.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RGQWE6DV47;
 				HEADER_SEARCH_PATHS = (
-					"$(gltools_header)",
 					"$(glew_header)",
+					"$(gltools_header)",
 				);
-				INFOPLIST_FILE = "13-SphereWorld-Lv1/Info.plist";
+				INFOPLIST_FILE = "17-Pyramid/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-3-SphereWorld-Lv1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liutingluhe.learn.-7-Pyramid";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -311,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		329C4B2E20878F3D0007CA73 /* Build configuration list for PBXProject "13-SphereWorld-Lv1" */ = {
+		32B4330220B164DC00FC933E /* Build configuration list for PBXProject "17-Pyramid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				329C4B4220878F3D0007CA73 /* Debug */,
-				329C4B4320878F3D0007CA73 /* Release */,
+				32B4331620B164DC00FC933E /* Debug */,
+				32B4331720B164DC00FC933E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		329C4B4420878F3D0007CA73 /* Build configuration list for PBXNativeTarget "13-SphereWorld-Lv1" */ = {
+		32B4331820B164DC00FC933E /* Build configuration list for PBXNativeTarget "17-Pyramid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				329C4B4520878F3D0007CA73 /* Debug */,
-				329C4B4620878F3D0007CA73 /* Release */,
+				32B4331920B164DC00FC933E /* Debug */,
+				32B4331A20B164DC00FC933E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 329C4B2B20878F3D0007CA73 /* Project object */;
+	rootObject = 32B432FF20B164DC00FC933E /* Project object */;
 }

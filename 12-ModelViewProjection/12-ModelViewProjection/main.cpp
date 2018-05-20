@@ -16,109 +16,118 @@
 #include <math.h>
 #include <glut/glut.h>
 
+// 视景体
+GLFrustum viewFrustum;
 
-// Global view frustum class
-GLFrustum           viewFrustum;
+// 着色器
+GLShaderManager shaderManager;
 
-// The shader manager
-GLShaderManager     shaderManager;
+// 花托批次
+GLTriangleBatch torusBatch;
 
-// The torus
-GLTriangleBatch     torusBatch;
-
-
-// Set up the viewport and the projection matrix
-void ChangeSize(int w, int h)
-{
-    // Prevent a divide by zero
-    if(h == 0)
-        h = 1;
+// 窗口变化回调
+void ChangeSize(int width, int height) {
+    // 防止除数为0
+    if(height == 0)
+        height = 1;
     
-    // Set Viewport to window dimensions
-    glViewport(0, 0, w, h);
+    // 设置视口
+    glViewport(0, 0, width, height);
     
-    viewFrustum.SetPerspective(35.0f, float(w)/float(h), 1.0f, 1000.0f);
+    // 设置投影方式是透视投影
+    viewFrustum.SetPerspective(35.0f, float(width)/float(height), 1.0f, 1000.0f);
 }
 
-
-// Called to draw scene
-void RenderScene(void)
-{
-    // Set up time based animation
+// 窗口渲染回调
+void RenderScene(void) {
+    // 定义一个测试运行时间
     static CStopWatch rotTimer;
+    // 获取到上一个时间点到当前的时间间隔(单位是每秒刻度数，即  1/60s)
     float yRot = rotTimer.GetElapsedSeconds() * 60.0f;
     
-    // Clear the window and the depth buffer
+    // 清空缓冲区
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    // Matrix Variables
+    // 定义矩阵
     M3DMatrix44f mTranslate, mRotate, mModelview, mModelViewProjection;
     
-    // Create a translation matrix to move the torus back and into sight
+    // 向z轴平移的矩阵变换
     m3dTranslationMatrix44(mTranslate, 0.0f, 0.0f, -2.5f);
     
-    // Create a rotation matrix based on the current value of yRot
+    // 绕y轴旋转的矩阵变换
     m3dRotationMatrix44(mRotate, m3dDegToRad(yRot), 0.0f, 1.0f, 0.0f);
     
-    // Add the rotation to the translation, store the result in mModelView
+    // 矩阵变换的合并矩阵
     m3dMatrixMultiply44(mModelview, mTranslate, mRotate);
     
-    // Add the modelview matrix to the projection matrix,
-    // the final matrix is the ModelViewProjection matrix.
-    m3dMatrixMultiply44(mModelViewProjection, viewFrustum.GetProjectionMatrix(),mModelview);
+    // 投影矩阵 + 视图变换矩阵 = 最终物体位置坐标
+    m3dMatrixMultiply44(mModelViewProjection, viewFrustum.GetProjectionMatrix(), mModelview);
     
-    // Pass this completed matrix to the shader, and render the torus
+    // 绘制花托
     GLfloat vBlack[] = { 0.0f, 0.0f, 0.0f, 1.0f };
     shaderManager.UseStockShader(GLT_SHADER_FLAT, mModelViewProjection, vBlack);
     torusBatch.Draw();
     
-    
-    // Swap buffers, and immediately refresh
+    // 因为是双缓冲区模式，后台缓冲区替换到前台缓存区进行显示
     glutSwapBuffers();
+    
+    // 自动触发下次渲染回调，达到动画的效果
     glutPostRedisplay();
 }
 
-// This function does any needed initialization on the rendering
-// context.
-void SetupRC()
-{
-    // Black background
+// 程序初始化
+void SetupRC() {
+    // 设置背景颜色为黑色
     glClearColor(0.8f, 0.8f, 0.8f, 1.0f );
     
+    // 开启深度测试
     glEnable(GL_DEPTH_TEST);
     
+    // 初始化着色器
     shaderManager.InitializeStockShaders();
     
-    // This makes a torus
+    // 得到花托批次数据
     gltMakeTorus(torusBatch, 0.4f, 0.15f, 30, 30);
     
-    
+    // 设置多边形模式为前后面线段模式
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 }
 
-
-///////////////////////////////////////////////////////////////////////////////
-// Main entry point for GLUT based programs
-int main(int argc, char* argv[])
-{
+// 程序入口
+int main(int argc, char* argv[]) {
+    // 设置 Mac OS 工作目录路径
     gltSetWorkingDirectory(argv[0]);
     
+    // GLUT初始化
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_STENCIL);
-    glutInitWindowSize(800, 600);
-    glutCreateWindow("ModelViewProjection Example");
-    glutReshapeFunc(ChangeSize);
-    glutDisplayFunc(RenderScene);
     
+    // 设置渲染模式
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
     
+    // 初始化窗口大小
+    glutInitWindowSize(600, 600);
+    
+    // 创建窗口并命名
+    glutCreateWindow("ModelViewProjection");
+    
+    // 判断驱动程序是否初始化完毕
     GLenum err = glewInit();
     if (GLEW_OK != err) {
-        fprintf(stderr, "GLEW Error: %s\n", glewGetErrorString(err));
+        fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
         return 1;
     }
     
+    // 窗口变化回调函数设置
+    glutReshapeFunc(ChangeSize);
+    
+    // 窗口渲染回调函数设置
+    glutDisplayFunc(RenderScene);
+    
+    // 初始化环境
     SetupRC();
     
+    // 主消息循环
     glutMainLoop();
+    
     return 0;
 }
