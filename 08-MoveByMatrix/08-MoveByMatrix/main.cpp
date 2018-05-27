@@ -74,9 +74,9 @@ void RenderScene(void) {
     m3dTranslationMatrix44(mTranslationMatrix, xPos, yPos, 0.0f);
     
     // 绕z轴旋转的矩阵，每次旋转角度加5度，m3dDegToRad = 角度 -> 弧度
-    static float yRot = 0.0f;
-    yRot += 5.0f;
-    m3dRotationMatrix44(mRotationMatrix, m3dDegToRad(yRot), 0.0f, 0.0f, 1.0f);
+    static float zRot = 0.0f;
+    zRot += 5.0f;
+    m3dRotationMatrix44(mRotationMatrix, m3dDegToRad(zRot), 0.0f, 0.0f, 1.0f);
     
     // 矩阵相乘，参数顺序很重要，先平移，后旋转
     m3dMatrixMultiply44(mFinalTransform, mTranslationMatrix, mRotationMatrix);
